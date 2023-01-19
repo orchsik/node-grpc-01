@@ -19,3 +19,12 @@
       --ts_proto_opt=env=node `
       --ts_proto_opt=esModuleInterop=true
   ```
+
+## 참고
+-  클라이언트는 서버와 동일한 주소 및 자격 증명이 필요.
+
+## 실행
+```powershell
+npx ts-node .\src\server.ts
+npx ts-node .\src\client.ts
+```

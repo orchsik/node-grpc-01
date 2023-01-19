@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "npx ts-node src/server.ts",
+    "client": "npx ts-node src/client.ts"
   },
   "keywords": [],
   "author": "",
