@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+// 패키지 이름은 원하는 대로 지정
+package authPackage;
+
+// 보낼 수 있는 메시지(규약 타입) 정의
+enum LoginCode {
+  SUCCESS = 0;
+  FAIL = 1;
+};
+
+message LoginResult {
+  LoginCode loginCode = 1;
+  optional string token = 2;
+}
+
+message LoginRequest {
+  string username = 1;
+  string password = 2;
+}
+
+// 메시지를 사용할 서비스 정의
+service AuthService {
+  rpc login(LoginRequest) returns (LoginResult);
+}
